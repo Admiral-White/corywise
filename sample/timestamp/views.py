@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-from .timestamp.models import MyUUIDModel
-from sample.timestamp.serializers import UUIDSerializer
+from .models import MyUUIDModel
+from .serializers import UUIDSerializer
 from rest_framework import generics
 
 
