@@ -7,10 +7,25 @@ from django.db import models
 
 class MyUUIDModel(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    ts = datetime.datetime.now().timestamp()
+    ct = datetime.datetime.now()
+    uid = uuid.uuid4()
 
-    def __str__(self):
-        return "%s %s " % (self.id, self.ts)
+    apiObject = {ct: uid}
+
+    print(apiObject)
+
+
+
+    # Printing random id using uuid1()
+    # print("The random id using uuid1() is : ", end="")
+    # print(uuid.uuid1())
+    #
+    # apiObject = {id: ts}
+
+
+
+    # def __str__(self):
+    #     return "%s %s " % (self.id, self.ts)
     # other fields
 
 

@@ -4,6 +4,6 @@ from .views import TimeStampView
 
 urlpatterns = [
 
-    path('get/endpoint', TimeStampView.as_view()),
+    path('get/endpoint/<int:pk>', TimeStampView.as_view()),
 
 ]
